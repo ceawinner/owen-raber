@@ -149,17 +149,7 @@ def buy(box, amount=500):
     for thread in threads:
         thread.join()
 
-
-def daily_500():
-    response = requests.put('https://api.blooket.com/api/users/addtokens') json={
-        'addedTokens': 500,
-        'name': user.name}
-
-    user.tokens = response['tokens']
-
-    return print(f'{Fore.LIGHTGREEN_EX}Claimed daily 500 tokens; Tokens: {Fore.LIGHTRED_EX + str(user.tokens)}')
-
-
+        
 if __name__ == '__main__':
     init(autoreset=True)
 
