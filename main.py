@@ -154,7 +154,6 @@ def daily_500():
     response = requests.put('https://api.blooket.com/api/users/addtokens', json={
         'addedTokens': 500,
         'name': user.name
-    }, headers=headers).json()
 
     user.tokens = response['tokens']
 
@@ -178,8 +177,6 @@ if __name__ == '__main__':
     headers['Authorization'] = token
 
     print(f'{Fore.LIGHTYELLOW_EX}Successfully logged in as {user.name} ({user.id}); Tokens: {Fore.LIGHTRED_EX + str(user.tokens)}')
-
-    daily_500()
 
     while user.tokens < config['desired']:
         sell_all(0)
