@@ -153,7 +153,7 @@ def buy(box, amount=500):
 def daily_500():
     response = requests.put('https://api.blooket.com/api/users/addtokens', json={
         'addedTokens': 500,
-        'name': user.name
+        'name': user.name}
 
     user.tokens = response['tokens']
 
