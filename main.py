@@ -156,7 +156,7 @@ def daily_500():
 
 
 if __name__ == '__main__':
-    init(autoreset=True)
+    int(autoreset=True)
 
     lock = Lock()
 
